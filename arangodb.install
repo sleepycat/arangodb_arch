@@ -1,5 +1,8 @@
 post_install() {
 
+  chown -R arangodb:arangodb "/var/lib/arangodb3" &> /dev/null
+  chown -R arangodb:arangodb "/var/lib/arangodb3-apps" &> /dev/null
+
   cat <<-EOF
 
   Welcome to ArangoDB.
